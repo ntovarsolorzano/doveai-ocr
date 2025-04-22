@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingOverlay.hidden = true;
 
     // API Endpoints
-    const API_URL = 'http://localhost:8000/api';
+    const API_URL = 'http://localhost:7000/api';
     const UPLOAD_ENDPOINT = `${API_URL}/upload`;
     const EXTRACT_ENDPOINT = `${API_URL}/extract`;
     const CONVERT_ENDPOINT = `${API_URL}/convert`;

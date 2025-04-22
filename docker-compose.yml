@@ -5,7 +5,7 @@ services:
     build: ./backend
     container_name: doveai-ocr-backend
     ports:
-      - "8888:8000"
+      - "7000:7000"
     volumes:
       - ./backend:/app
       - ./backend/uploads:/app/uploads
