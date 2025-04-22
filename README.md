@@ -30,7 +30,7 @@ DoveAI OCR is a web application that uses MistralAI's OCR capabilities to extrac
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/doveai-ocr.git
+   git clone https://github.com/ntovarsolorzano/doveai-ocr.git
    cd doveai-ocr
    ```
 
