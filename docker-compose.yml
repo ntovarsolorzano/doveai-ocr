@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: doveai-ocr-backend
+    ports:
+      - "8888:8000"
+    volumes:
+      - ./backend:/app
+      - ./backend/uploads:/app/uploads
+    environment:
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+    restart: unless-stopped
+    networks:
+      - doveai-network
+
+  frontend:
+    build: ./frontend
+    container_name: doveai-ocr-frontend
+    ports:
+      - "881:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - doveai-network
+
+networks:
+  doveai-network:
+    driver: bridge
