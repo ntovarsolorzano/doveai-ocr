@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     MAX_UPLOAD_SIZE: int = 100 * 1024 * 1024  # 100 MB
     
     # CORS settings
-    BACKEND_CORS_ORIGINS: list[str] = ["http://localhost", "http://localhost:8000", "http://localhost:3000"]
+    BACKEND_CORS_ORIGINS: list[str] = ["http://localhost", "http://localhost:7000", "http://localhost:3000"]
     
     class Config:
         case_sensitive = True
